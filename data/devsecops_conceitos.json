@@ -1,0 +1,27 @@
+[
+  {
+    "pergunta": "O que é DevSecOps?",
+    "resposta": "DevSecOps é DevOps + Segurança desde o início. Integra práticas de segurança em todas as fases para entregar software rápido e seguro.",
+    "fase": "Conceito Geral"
+  },
+  {
+    "pergunta": "Quais são as 5 fases do DevSecOps?",
+    "resposta": "1. Planejamento (Threat Modeling), 2. Desenvolvimento (código seguro), 3. Testes (SAST/DAST), 4. Implantação (IaC seguro), 5. Operações (monitoramento).",
+    "fase": "Ciclo"
+  },
+  {
+    "pergunta": "Por que precisamos de DevSecOps?",
+    "resposta": "Para reduzir o tempo de correção de falhas de segurança e acelerar a entrega. Encontrar falha no início é 10x mais barato que na produção.",
+    "fase": "Benefício"
+  },
+  {
+    "pergunta": "O que é Shift Left?",
+    "resposta": "É trazer a segurança para a esquerda do pipeline, ou seja, para o início. Testar segurança já enquanto codifica.",
+    "fase": "Planejamento"
+  },
+  {
+    "pergunta": "O que é SAST e DAST?",
+    "resposta": "SAST analisa o código fonte parado. DAST analisa a aplicação rodando, procurando falhas em tempo real.",
+    "fase": "Testes"
+  }
+]
