@@ -1,55 +1,25 @@
 # Base de Conhecimento
 
-## Dados Utilizados
+## Fonte dos Dados
+Os dados foram criados a partir das aulas de DevSecOps da DIO e da documentação oficial, organizados manualmente para este protótipo.
 
-Descreva se usou os arquivos da pasta `data`, por exemplo:
+## Formato
+O agente usará um arquivo JSON em `data/devsecops_conceitos.json` com pares de pergunta e resposta.
 
-| Arquivo | Formato | Utilização no Agente |
-|---------|---------|---------------------|
-| `historico_atendimento.csv` | CSV | Contextualizar interações anteriores |
-| `perfil_investidor.json` | JSON | Personalizar recomendações |
-| `produtos_financeiros.json` | JSON | Sugerir produtos adequados ao perfil |
-| `transacoes.csv` | CSV | Analisar padrão de gastos do cliente |
+## Conteúdo da Base (15 itens iniciais)
 
-> [!TIP]
-> **Quer um dataset mais robusto?** Você pode utilizar datasets públicos do [Hugging Face](https://huggingface.co/datasets) relacionados a finanças, desde que sejam adequados ao contexto do desafio.
+1.  **O que é DevSecOps?** - Uma abordagem que incorpora segurança desde o início do desenvolvimento.
+2.  **Quais as 5 fases?** - Planejamento, Desenvolvimento, Testes, Implantação, Operações.
+3.  **Por que precisamos de DevSecOps?** - Para reduzir o tempo de correção de falhas de segurança e acelerar a entrega segura.
+4.  **O que é Shift Left?** - Trazer a segurança para o início do ciclo de desenvolvimento.
+5.  **O que é SAST?** - Análise de segurança no código-fonte (estática).
+6.  **O que é DAST?** - Análise de segurança na aplicação rodando (dinâmica).
+7.  **Ferramenta de Planejamento seguro?** - Threat Modeling.
+8.  **Ferramenta de Desenvolvimento seguro?** - Linters de segurança, SonarQube.
+9.  **O que é IaC?** - Infrastructure as Code, e deve ser verificado por segurança.
+10. **O que é um pipeline seguro?** - Pipeline CI/CD com etapas de scan de vulnerabilidades.
 
----
-
-## Adaptações nos Dados
-
-> Você modificou ou expandiu os dados mockados? Descreva aqui.
-
-[Sua descrição aqui]
-
----
-
-## Estratégia de Integração
-
-### Como os dados são carregados?
-> Descreva como seu agente acessa a base de conhecimento.
-
-[ex: Os JSON/CSV são carregados no início da sessão e incluídos no contexto do prompt]
-
-### Como os dados são usados no prompt?
-> Os dados vão no system prompt? São consultados dinamicamente?
-
-[Sua descrição aqui]
-
----
-
-## Exemplo de Contexto Montado
-
-> Mostre um exemplo de como os dados são formatados para o agente.
-
-```
-Dados do Cliente:
-- Nome: João Silva
-- Perfil: Moderado
-- Saldo disponível: R$ 5.000
-
-Últimas transações:
-- 01/11: Supermercado - R$ 450
-- 03/11: Streaming - R$ 55
-...
-```
+## Regras do Agente
+- Só responder com base nesses dados
+- Se a pergunta não estiver aqui, responder: "Ainda não tenho essa informação na minha base sobre DevSecOps"
+- Nunca inventar ferramenta ou conceito
