@@ -1,81 +1,28 @@
 # Documentação do Agente
 
 ## Caso de Uso
+**SecOps Assistant - Assistente Virtual para iniciantes em DevSecOps**
 
 ### Problema
 > Qual problema financeiro seu agente resolve?
-
-[Sua descrição aqui]
+**Adaptado para meu tema:** Qual problema de DevSecOps meu agente resolve?
+Iniciantes em TI e Devs Juniores confundem DevOps com DevSecOps, não sabem quais são as 5 fases e deixam a segurança só para o final do projeto. Isso gera retrabalho, vulnerabilidades em produção e demora para corrigir falhas.
 
 ### Solução
 > Como o agente resolve esse problema de forma proativa?
-
-[Sua descrição aqui]
+O agente responde dúvidas simples e diretas usando uma base de conhecimento curada. Ele explica o que é DevSecOps, as 5 fases (Planejamento, Desenvolvimento, Testes, Implantação, Operações) e por que precisamos dele (reduzir tempo de correção de falhas). Quando não tem a informação, ele avisa que não sabe, para não inventar.
 
 ### Público-Alvo
 > Quem vai usar esse agente?
+Estudantes de TI, Devs Juniores e alunos da DIO que estão começando em Segurança e Cloud.
 
-[Sua descrição aqui]
+### Comportamento e Tom
+- Didático e simples, sem jargão desnecessário
+- Usa exemplos práticos
+- Sempre cita a base de conhecimento
+- Se não souber: "Ainda não tenho essa informação na minha base sobre DevSecOps"
 
----
-
-## Persona e Tom de Voz
-
-### Nome do Agente
-[Nome escolhido]
-
-### Personalidade
-> Como o agente se comporta? (ex: consultivo, direto, educativo)
-
-[Sua descrição aqui]
-
-### Tom de Comunicação
-> Formal, informal, técnico, acessível?
-
-[Sua descrição aqui]
-
-### Exemplos de Linguagem
-- Saudação: [ex: "Olá! Como posso ajudar com suas finanças hoje?"]
-- Confirmação: [ex: "Entendi! Deixa eu verificar isso para você."]
-- Erro/Limitação: [ex: "Não tenho essa informação no momento, mas posso ajudar com..."]
-
----
-
-## Arquitetura
-
-### Diagrama
-
-```mermaid
-flowchart TD
-    A[Cliente] -->|Mensagem| B[Interface]
-    B --> C[LLM]
-    C --> D[Base de Conhecimento]
-    D --> C
-    C --> E[Validação]
-    E --> F[Resposta]
-```
-
-### Componentes
-
-| Componente | Descrição |
-|------------|-----------|
-| Interface | [ex: Chatbot em Streamlit] |
-| LLM | [ex: GPT-4 via API] |
-| Base de Conhecimento | [ex: JSON/CSV com dados do cliente] |
-| Validação | [ex: Checagem de alucinações] |
-
----
-
-## Segurança e Anti-Alucinação
-
-### Estratégias Adotadas
-
-- [ ] [ex: Agente só responde com base nos dados fornecidos]
-- [ ] [ex: Respostas incluem fonte da informação]
-- [ ] [ex: Quando não sabe, admite e redireciona]
-- [ ] [ex: Não faz recomendações de investimento sem perfil do cliente]
-
-### Limitações Declaradas
-> O que o agente NÃO faz?
-
-[Liste aqui as limitações explícitas do agente]
+### Limitações
+- Não executa código
+- Não cria infraestrutura
+- Só responde com base no arquivo `data/devsecops_conceitos.json`
